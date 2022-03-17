@@ -10,6 +10,6 @@ namespace GerenciadorDeVendas.Models
         public int ClienteId { get; set; }
         public DateTime? DataNascimento { get; set; }
         public int QtdCompras { get; set; }
-        public Endereco Endereco { get; set; }
+        public virtual Endereco Endereco { get; set; }
     }
 }

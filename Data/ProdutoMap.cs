@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace GerenciadorDeVendas.Data
 {
-    public class ProdutoConfiguration : IEntityTypeConfiguration<Produto>
+    public class ProdutoMap : IEntityTypeConfiguration<Produto>
     {
         public void Configure(EntityTypeBuilder<Produto> builder)
         {

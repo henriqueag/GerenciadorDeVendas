@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace GerenciadorDeVendas.Data
 {
-    public class EnderecoConfiguration : IEntityTypeConfiguration<Endereco>
+    public class EnderecoMap : IEntityTypeConfiguration<Endereco>
     {
         public void Configure(EntityTypeBuilder<Endereco> builder)
         {

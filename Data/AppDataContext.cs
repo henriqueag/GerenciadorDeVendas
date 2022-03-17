@@ -15,11 +15,14 @@ namespace GerenciadorDeVendas.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new ClienteConfiguration());
-            modelBuilder.ApplyConfiguration(new EnderecoConfiguration());
-            modelBuilder.ApplyConfiguration(new VendedorConfiguration());
-            modelBuilder.ApplyConfiguration(new ProdutoConfiguration());
-            modelBuilder.ApplyConfiguration(new CategoriaConfiguration());
+            modelBuilder.ApplyConfiguration(new ClienteMap());
+            modelBuilder.ApplyConfiguration(new EnderecoMap());
+            modelBuilder.ApplyConfiguration(new VendedorMap());
+            modelBuilder.ApplyConfiguration(new ProdutoMap());
+            modelBuilder.ApplyConfiguration(new CategoriaMap());
+            modelBuilder.ApplyConfiguration(new FormasPagamentoMap());
+            modelBuilder.ApplyConfiguration(new ItensDaVendaMap());
+            modelBuilder.ApplyConfiguration(new VendaMap());
         }
     }
 }

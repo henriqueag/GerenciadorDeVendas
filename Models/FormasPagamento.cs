@@ -6,8 +6,8 @@ namespace GerenciadorDeVendas.Models
     {
         public int FormasPagamentoId { get; set; }
         public string Descricao { get; set; }
-        public bool TemAcrescimo { get; set; }
-        public decimal PercentualAcrescimo { get; set; }
-        public TipoPagamento TipoPagamento { get; set; }
+        public bool PermiteAcrescimo { get; set; }
+        public bool PermiteDesconto { get; set; }
+        public string TipoPagamento { get; set; }
     }
 }
