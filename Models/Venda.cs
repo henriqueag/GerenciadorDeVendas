@@ -1,4 +1,5 @@
 ﻿using GerenciadorDeVendas.Models.Enum;
+using System;
 using System.Collections.Generic;
 
 namespace GerenciadorDeVendas.Models
@@ -19,6 +20,7 @@ namespace GerenciadorDeVendas.Models
         public virtual FormasPagamento FormasPagamento { get; set; }
 
         public TipoPagamento TipoPagamento { get; set; }
+        public DateTime DataLancamento { get; set; }
         public decimal Desconto { get; set; }
         public decimal Acrescimo { get; set; }
         public decimal TotalGeral { get; set; }
