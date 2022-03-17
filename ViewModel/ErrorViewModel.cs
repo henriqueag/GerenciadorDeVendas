@@ -1,6 +1,4 @@
-using System;
-
-namespace GerenciadorDeVendas.Models
+namespace GerenciadorDeVendas.ViewModel
 {
     public class ErrorViewModel
     {

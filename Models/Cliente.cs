@@ -7,7 +7,9 @@ namespace GerenciadorDeVendas.Models
 {
     public class Cliente : Pessoa
     {
-        public DateTime DataNascimento { get; set; }
-        public int QtdCompras { get; set; }        
+        public int ClienteId { get; set; }
+        public DateTime? DataNascimento { get; set; }
+        public int QtdCompras { get; set; }
+        public Endereco Endereco { get; set; }
     }
 }
