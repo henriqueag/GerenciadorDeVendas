@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
-using GerenciadorDeVendas.ViewModel;
+using GerenciadorEstoque.ViewModel;
 
-namespace GerenciadorDeVendas.Controllers
+namespace GerenciadorEstoque.Controllers
 {
     public class HomeController : Controller
     {

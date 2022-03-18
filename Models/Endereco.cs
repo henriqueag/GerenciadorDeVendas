@@ -1,4 +1,4 @@
-﻿namespace GerenciadorDeVendas.Models
+﻿namespace GerenciadorEstoque.Models
 {
     public class Endereco
     {
@@ -13,6 +13,6 @@
         public int Numero { get; set; }
 
         public int ClienteId { get; set; }
-        public virtual Cliente Cliente { get; set; }
+        public virtual Usuario Cliente { get; set; }
     }
 }

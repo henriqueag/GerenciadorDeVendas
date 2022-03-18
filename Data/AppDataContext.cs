@@ -1,12 +1,12 @@
 ﻿using System;
-using GerenciadorDeVendas.Models;
+using GerenciadorEstoque.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace GerenciadorDeVendas.Data
+namespace GerenciadorEstoque.Data
 {
     public class AppDataContext : DbContext
     {
-        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Usuario> Clientes { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
 
         public AppDataContext(DbContextOptions options) : base(options)
@@ -15,14 +15,6 @@ namespace GerenciadorDeVendas.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new ClienteMap());
-            modelBuilder.ApplyConfiguration(new EnderecoMap());
-            modelBuilder.ApplyConfiguration(new VendedorMap());
-            modelBuilder.ApplyConfiguration(new ProdutoMap());
-            modelBuilder.ApplyConfiguration(new CategoriaMap());
-            modelBuilder.ApplyConfiguration(new FormasPagamentoMap());
-            modelBuilder.ApplyConfiguration(new ItensDaVendaMap());
-            modelBuilder.ApplyConfiguration(new VendaMap());
         }
     }
 }

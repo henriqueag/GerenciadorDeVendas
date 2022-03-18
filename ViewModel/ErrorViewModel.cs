@@ -1,4 +1,4 @@
-namespace GerenciadorDeVendas.ViewModel
+namespace GerenciadorEstoque.ViewModel
 {
     public class ErrorViewModel
     {
