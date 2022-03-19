@@ -10,9 +10,11 @@ namespace GerenciadorEstoque.Models
         public decimal PrecoCusto { get; set; }
         public decimal PrecoVenda { get; set; }
         public double Estoque { get; set; }
+        public string UniMedida { get; set; }
         public bool Ativo { get; set; }
         public DateTime DataCadastro { get; set; }
         public DateTime UltimaAlteracao { get; set; }
-                
+
+        public virtual Categoria Categoria { get; set; }
     }
 }

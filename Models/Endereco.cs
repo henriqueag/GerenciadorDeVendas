@@ -9,10 +9,6 @@
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Uf { get; set; }
-        public string DDD { get; set; }
         public int Numero { get; set; }
-
-        public int ClienteId { get; set; }
-        public virtual Usuario Cliente { get; set; }
     }
 }
