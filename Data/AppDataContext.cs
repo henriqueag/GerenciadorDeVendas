@@ -1,5 +1,4 @@
-﻿using System;
-using GerenciadorEstoque.Models;
+﻿using GerenciadorEstoque.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace GerenciadorEstoque.Data
@@ -24,6 +23,10 @@ namespace GerenciadorEstoque.Data
             modelBuilder.ApplyConfiguration(new EnderecoMap());
             modelBuilder.ApplyConfiguration(new FornecedorMap());
             modelBuilder.ApplyConfiguration(new SolicitanteMap());
+            modelBuilder.ApplyConfiguration(new ItensEntradaMap());
+            modelBuilder.ApplyConfiguration(new EntradaMap());
+            modelBuilder.ApplyConfiguration(new ItensSaidaMap());
+            modelBuilder.ApplyConfiguration(new SaidaMap());
         }
     }
 }

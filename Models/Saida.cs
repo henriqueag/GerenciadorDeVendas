@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GerenciadorEstoque.Models
 {
@@ -6,6 +7,7 @@ namespace GerenciadorEstoque.Models
     {
         public int SaidaId { get; set; }
         public string NroNota { get; set; }
+        public int SolicitanteId { get; set; }
         public Solicitante Solicitante { get; set; }
         public DateTime DataEmissao { get; set; }
         public DateTime DataSaida { get; set; }
@@ -15,5 +17,7 @@ namespace GerenciadorEstoque.Models
         public int QtdProdutos { get; set; }
         public int QtdItens { get; set; }
         public string InformacoesAdicionais { get; set; }
+
+        public ICollection<ItensSaida> ItensSaida { get; set; }
     }
 }
