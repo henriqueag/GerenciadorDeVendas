@@ -27,6 +27,7 @@ namespace GerenciadorEstoque.Data
             modelBuilder.ApplyConfiguration(new EntradaMap());
             modelBuilder.ApplyConfiguration(new ItensSaidaMap());
             modelBuilder.ApplyConfiguration(new SaidaMap());
+            modelBuilder.ApplyConfiguration(new UsuarioMap());
         }
     }
 }

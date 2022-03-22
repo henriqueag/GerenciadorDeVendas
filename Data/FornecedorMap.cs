@@ -1,6 +1,7 @@
 ﻿using GerenciadorEstoque.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
 
 namespace GerenciadorEstoque.Data
 {
@@ -10,6 +11,7 @@ namespace GerenciadorEstoque.Data
         {
             builder.Property(model => model.Nome).HasColumnType("varchar(100)").IsRequired();
             builder.Property(model => model.CNPJ).HasColumnType("varchar(20)").IsRequired();
+            builder.Property<DateTime>("DataCadastro").HasDefaultValueSql("getdate()");
         }
     }
 }

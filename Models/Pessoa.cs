@@ -1,4 +1,6 @@
-﻿namespace GerenciadorEstoque.Models
+﻿using System;
+
+namespace GerenciadorEstoque.Models
 {
     public abstract class Pessoa
     {        
