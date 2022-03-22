@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GerenciadorEstoque.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20220321231433_AdicaoDeClasses")]
-    partial class AdicaoDeClasses
+    [Migration("20220322012323_AlteracaoDoDbContext")]
+    partial class AlteracaoDoDbContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,7 +34,7 @@ namespace GerenciadorEstoque.Migrations
 
                     b.HasKey("CategoriaId");
 
-                    b.ToTable("Categoria");
+                    b.ToTable("Categorias");
                 });
 
             modelBuilder.Entity("GerenciadorEstoque.Models.Endereco", b =>
@@ -72,7 +72,7 @@ namespace GerenciadorEstoque.Migrations
 
                     b.HasKey("EnderecoId");
 
-                    b.ToTable("Endereco");
+                    b.ToTable("Enderecos");
                 });
 
             modelBuilder.Entity("GerenciadorEstoque.Models.Entrada", b =>
@@ -117,7 +117,7 @@ namespace GerenciadorEstoque.Migrations
 
                     b.HasIndex("FornecedorId");
 
-                    b.ToTable("Entrada");
+                    b.ToTable("Entradas");
                 });
 
             modelBuilder.Entity("GerenciadorEstoque.Models.Fornecedor", b =>
@@ -147,7 +147,7 @@ namespace GerenciadorEstoque.Migrations
 
                     b.HasIndex("EnderecoId");
 
-                    b.ToTable("Fornecedor");
+                    b.ToTable("Fornecedores");
                 });
 
             modelBuilder.Entity("GerenciadorEstoque.Models.ItensEntrada", b =>
@@ -175,7 +175,7 @@ namespace GerenciadorEstoque.Migrations
 
                     b.HasIndex("ProdutoId");
 
-                    b.ToTable("ItensEntrada");
+                    b.ToTable("ItensEntradas");
                 });
 
             modelBuilder.Entity("GerenciadorEstoque.Models.ItensSaida", b =>
@@ -203,7 +203,7 @@ namespace GerenciadorEstoque.Migrations
 
                     b.HasIndex("SaidaId");
 
-                    b.ToTable("ItensSaida");
+                    b.ToTable("ItensSaidas");
                 });
 
             modelBuilder.Entity("GerenciadorEstoque.Models.Produto", b =>
@@ -253,7 +253,7 @@ namespace GerenciadorEstoque.Migrations
 
                     b.HasIndex("CategoriaId");
 
-                    b.ToTable("Produto");
+                    b.ToTable("Produtos");
                 });
 
             modelBuilder.Entity("GerenciadorEstoque.Models.Saida", b =>
@@ -298,7 +298,7 @@ namespace GerenciadorEstoque.Migrations
 
                     b.HasIndex("SolicitanteId");
 
-                    b.ToTable("Saida");
+                    b.ToTable("Saidas");
                 });
 
             modelBuilder.Entity("GerenciadorEstoque.Models.Solicitante", b =>
@@ -336,7 +336,7 @@ namespace GerenciadorEstoque.Migrations
 
                     b.HasIndex("EnderecoId");
 
-                    b.ToTable("Solicitante");
+                    b.ToTable("Solicitantes");
                 });
 
             modelBuilder.Entity("GerenciadorEstoque.Models.Usuario", b =>
@@ -380,7 +380,7 @@ namespace GerenciadorEstoque.Migrations
 
                     b.HasKey("UsuarioId");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("GerenciadorEstoque.Models.Entrada", b =>

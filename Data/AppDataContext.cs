@@ -6,11 +6,15 @@ namespace GerenciadorEstoque.Data
     public class AppDataContext : DbContext
     {
         public DbSet<Endereco> Enderecos { get; set; }
-        public DbSet<Endereco> Categorias { get; set; }
-        public DbSet<Endereco> Fornecedores { get; set; }
-        public DbSet<Endereco> Produtos { get; set; }
-        public DbSet<Endereco> Solicitantes { get; set; }
-
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Fornecedor> Fornecedores { get; set; }
+        public DbSet<Solicitante> Solicitantes { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }        
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Entrada> Entradas { get; set; }
+        public DbSet<Saida> Saidas { get; set; }
+        public DbSet<ItensEntrada> ItensEntradas { get; set; }
+        public DbSet<ItensSaida> ItensSaidas { get; set; }
 
         public AppDataContext(DbContextOptions options) : base(options)
         {

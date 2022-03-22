@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace GerenciadorEstoque.Models
 {
@@ -6,7 +7,7 @@ namespace GerenciadorEstoque.Models
     {
         public int CategoriaId { get; set; }
         public string Nome { get; set; }
-
+        [JsonIgnore]
         public virtual ICollection<Produto> Produtos { get; set; }
     }
 }

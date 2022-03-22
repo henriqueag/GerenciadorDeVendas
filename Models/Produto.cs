@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace GerenciadorEstoque.Models
 {
@@ -12,7 +13,9 @@ namespace GerenciadorEstoque.Models
         public double Estoque { get; set; }
         public string UniMedida { get; set; }
         public bool Ativo { get; set; }
+        [JsonIgnore]
         public DateTime DataCadastro { get; set; }
+        [JsonIgnore]
         public DateTime UltimaAlteracao { get; set; }
 
         public virtual Categoria Categoria { get; set; }

@@ -6,9 +6,9 @@ namespace GerenciadorEstoque.Service.Interface
     public interface IServiceGeneric<TSource> where TSource : class
     {
         Task Add(TSource source);
-        void Update(TSource source);
-        void Delete(int id);
-        void GetById(int id);
-        IEnumerable<TSource> GetAll();
+        Task Update(TSource source);
+        Task Delete(int id);
+        Task<TSource> GetById(int id);
+        Task<IEnumerable<TSource>> GetAll();
     }
 }

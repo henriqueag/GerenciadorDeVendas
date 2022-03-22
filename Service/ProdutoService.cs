@@ -26,6 +26,16 @@ namespace GerenciadorEstoque.Service
             }
             try
             {
+                //if (string.IsNullOrWhiteSpace(source.CodBarras))
+                //{
+                //    int ultimoId = await _context.Produtos.MaxAsync(model => model.ProdutoId) + 1;
+                //    source.CodBarras = $"{ultimoId:d13}";
+                //}
+                if (source.Categoria is not null)
+                {
+                    var categoria = await _context.Categorias.FindAsync(source.Categoria.CategoriaId);
+                    source.Categoria = categoria;
+                }
                 await _context.AddAsync(source);
                 await _context.SaveChangesAsync();
             }
@@ -37,27 +47,51 @@ namespace GerenciadorEstoque.Service
             {
                 throw;
             }
-            
+
         }
 
-        public void Delete(int id)
+        public async Task Update(Produto source)
         {
-            throw new NotImplementedException();
+            _context.Update(source);
+            await _context.SaveChangesAsync();
         }
 
-        public IEnumerable<Produto> GetAll()
+        public async Task<IEnumerable<Produto>> GetAll()
         {
-            throw new NotImplementedException();
+            var produtos = await _context.Produtos.Include(x => x.Categoria).AsNoTracking().ToListAsync();
+            return produtos;
         }
 
-        public void GetById(int id)
-        {
-            throw new NotImplementedException();
+        public async Task<Produto> GetById(int id)
+        {           
+            var obj = await _context.Produtos.Include(x => x.Categoria).FirstOrDefaultAsync(x => x.ProdutoId == id);
+            if (obj is null)
+            {
+                throw new NullReferenceException("Não foi encontrado nenhum produto com id passado.");
+            }
+            return obj;
         }
 
-        public void Update(Produto source)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Remove(await GetById(id));
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
+            catch (DbUpdateException)
+            {
+                throw;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
     }
 }
