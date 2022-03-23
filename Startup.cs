@@ -1,6 +1,6 @@
 using GerenciadorEstoque.Data;
 using GerenciadorEstoque.Service;
-using GerenciadorEstoque.Service.Interface;
+using GerenciadorEstoque.Service.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -30,6 +30,7 @@ namespace GerenciadorEstoque
                 options.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
             services.AddScoped<IProdutoService, ProdutoService>();
+            services.AddScoped<ICategoriaService, CategoriaService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

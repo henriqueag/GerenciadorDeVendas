@@ -1,6 +1,6 @@
 ﻿using GerenciadorEstoque.Models;
 
-namespace GerenciadorEstoque.Service.Interface
+namespace GerenciadorEstoque.Service.Interfaces
 {
     public interface IProdutoService : IServiceGeneric<Produto>
     {
